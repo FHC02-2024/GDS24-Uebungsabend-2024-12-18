@@ -1,5 +1,7 @@
 package org.campus02.oop;
 
+import java.util.HashMap;
+
 public class DemoApp {
 
 	public static void main(String[] args) {
@@ -10,6 +12,14 @@ public class DemoApp {
 
 		GenderAnalyzer genderAnalyzer = new GenderAnalyzer();
 		pm.doAnalysis(genderAnalyzer);
+
+		CountryAnalyzer countryAnalyzer = new CountryAnalyzer();
+		pm.doAnalysis(countryAnalyzer);
+
+		HashMap<String, Integer> result = countryAnalyzer.getResult();
+		for (String country: result.keySet()) {
+			System.out.println(country + ": " + result.get(country));
+		}
 
 	}
 	
