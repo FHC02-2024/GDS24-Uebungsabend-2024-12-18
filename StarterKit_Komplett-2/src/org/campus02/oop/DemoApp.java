@@ -1,5 +1,6 @@
 package org.campus02.oop;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DemoApp {
@@ -23,6 +24,13 @@ public class DemoApp {
 
 		MaxSalaryAnalyzer maxSalaryAnalyzer = new MaxSalaryAnalyzer();
 		pm.doAnalysis(maxSalaryAnalyzer);
+
+		BMIAnalyzer bmiAnalyzer = new BMIAnalyzer();
+		pm.doAnalysis(bmiAnalyzer);
+		ArrayList<Pair<Person, Double>> resultBMIAnalyzer = bmiAnalyzer.getResult();
+		for (Pair<Person, Double> personBMIPair : resultBMIAnalyzer) {
+			System.out.println(personBMIPair.getKey().getLastname() + ": " + personBMIPair.getValue());
+		}
 
 	}
 	
