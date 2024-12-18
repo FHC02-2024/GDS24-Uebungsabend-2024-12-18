@@ -21,6 +21,9 @@ public class DemoApp {
 			System.out.println(country + ": " + result.get(country));
 		}
 
+		MaxSalaryAnalyzer maxSalaryAnalyzer = new MaxSalaryAnalyzer();
+		pm.doAnalysis(maxSalaryAnalyzer);
+
 	}
 	
 	
